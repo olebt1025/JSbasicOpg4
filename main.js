@@ -28,10 +28,21 @@ function addToHistory(roll, sides) {
 
     //creates a new list item for every roll
     const item = document.createElement("li");
+    
 
     item.textContent = ` You have rolled d${sides}: ${roll}`;
+
+    
 
 
     //take the newly created list item and puts it in the list
     list.appendChild(item);
+
+
+    //limits the amount of rolls saved  on page, but deletes the oldest roll.
+    const maxRolls = 10;
+    if (list.children.length > maxRolls) {
+        list.removeChild(list.firstElementChild);
+    }
 }
+
