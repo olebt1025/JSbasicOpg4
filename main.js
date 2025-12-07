@@ -39,7 +39,7 @@ function addToHistory(roll, sides) {
     list.appendChild(item);
 
 
-    //limits the amount of rolls saved  on page, but deletes the oldest roll.
+    //limits the amount of rolls saved  on page and deletes the oldest roll.
     const maxRolls = 10;
     if (list.children.length > maxRolls) {
         list.removeChild(list.firstElementChild);
